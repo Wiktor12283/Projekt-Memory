@@ -8,20 +8,27 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100vh;
   margin: 0;
   background-color: var(--brigth-bg);
   color: var(--bright-cl);
   font-family: monospace;
   width: 100vw;
+  transition: 0.3s;
 }
 body.dark {
   background-color: var(--dark-bg);
   color: var(--dark-cl);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0.1rem;
+  flex-direction: column;
 }
 
 span.cont {
@@ -41,7 +48,7 @@ h1 {
   align-items: start;
   justify-content: center;
   flex-wrap: wrap;
-  width: 50vw;
+  max-width: 50rem;
   gap: 0.5rem;
 }
 
@@ -88,4 +95,20 @@ h1 {
 
 .front-face {
   transform: rotateY(180deg);
+}
+
+@media (max-width: 790px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media (max-width: 650px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (max-width: 440px) {
+  html {
+    font-size: 70%;
+  }
 }
