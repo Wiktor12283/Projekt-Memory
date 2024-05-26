@@ -8,7 +8,6 @@
 }
 
 body {
-  align-items: center;
   height: 100vh;
   margin: 0;
   background-color: var(--brigth-bg);
@@ -89,7 +88,7 @@ h1 {
 
 .memory-card:hover {
   cursor: pointer;
-  scale: 1.05;
+  box-shadow: 5px 5px 5px #000;
   transition: 0.3s;
 }
 

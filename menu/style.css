@@ -1,3 +1,12 @@
+:root {
+  --brigth-bg: #00ffb3;
+  --bright-cl: #000;
+  --bright-crd: rgb(16, 49, 39);
+  --dark-bg: var(--bright-crd);
+  --dark-cl: #fff;
+  --dark-crd: var(--brigth-bg);
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -5,15 +14,20 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  background-color: #1d1f27;
-  color: #fff;
-  font-family: "Arial", sans-serif;
+  background-color: var(--brigth-bg);
+  color: var(--bright-cl);
+  font-family: monospace;
   width: 100vw;
+  transition: 0.3s;
+}
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-cl);
 }
 a {
   text-decoration: none;
-  color: #fff;
-  background-color: blue;
+  color: var(--dark-cl);
+  background-color: var(--bright-crd);
   width: 100px;
   text-align: center;
   border-radius: 20%;
@@ -22,4 +36,8 @@ a {
 }
 a:hover {
   box-shadow: 5px 5px 5px #000;
+}
+a.dark {
+  color: var(--bright-cl);
+  background-color: var(--dark-crd);
 }

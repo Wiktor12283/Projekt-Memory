@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gra Memory</title>
-    <link rel="stylesheet" href="/menu/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/menu/style.css" />
+    <script defer>
+      document.addEventListener("keypress", function (event) {
+        if (event.key == "d") {
+          document.body.classList.toggle("dark");
+          document.querySelector("a").classList.toggle("dark");
+        }
+      });
+    </script>
+  </head>
+  <body>
     <h1>Gra Memory</h1>
     <a href="/game/index.html"><h1>Start</h1></a>
-</body>
+  </body>
 </html>
