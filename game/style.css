@@ -80,8 +80,8 @@ h1 {
 }
 
 .memory-card img {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   backface-visibility: hidden;
   position: absolute;
 }
@@ -90,6 +90,9 @@ h1 {
   cursor: pointer;
   box-shadow: 5px 5px 5px #000;
   transition: 0.3s;
+}
+.memory-card.flip:hover {
+  box-shadow: -5px 5px 5px #000;
 }
 
 .front-face {

@@ -34,7 +34,9 @@ function manageClock() {
     clockTxt += String(seconds);
   }
   seconds += 1;
-  clock.textContent = clockTxt;
+  if (!checkForWin()) {
+    clock.textContent = clockTxt;
+  }
 }
 
 function flipCard() {
@@ -68,7 +70,7 @@ function checkForMatch() {
 function checkForWin() {
   let isWin = false;
   cards.forEach((card) => {
-    isWin = card.classList.contains("flip") ? true : false;
+    isWin = card.classList.contains("flip");
   });
   return isWin;
 }
@@ -101,9 +103,7 @@ cards.forEach((card) => {
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
-if (!checkForWin()) {
-  setInterval(manageClock, 1000);
-}
+setInterval(manageClock, 1000);
 
 document.addEventListener("keypress", function (event) {
   if (event.key == "d") {
